@@ -8,6 +8,7 @@ var appName = "ChatGPT ASP.NET 8 Integration";
 builder.AddChatGpt();
 builder.AddSerilog(builder.Configuration,"AspNet8 with ChatGPT");
 
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddControllers();
 
 builder.Services.AddSwagger(builder.Configuration, appName);
